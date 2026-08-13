@@ -4,1709 +4,469 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>TechVision | Technology & Security Solutions</title>
-
-<!-- TechVision Browser Tab Icon -->
-<link rel="icon"
-      type="image/svg+xml"
-      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/svgs/solid/microchip.svg">
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-<!-- Font Awesome -->
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<title>Hacking This Email</title>
 
 <style>
-
-/* =========================
-   GLOBAL
-========================= */
-
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    font-family: "Inter", sans-serif;
-    background: #05070a;
-    color: white;
-    overflow-x: hidden;
-}
-
-a {
-    text-decoration: none;
-}
-
-
-/* =========================
-   NAVBAR
-========================= */
-
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-
-    padding: 17px 7%;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    z-index: 1000;
-
-    background: rgba(5, 7, 10, 0.72);
-    backdrop-filter: blur(15px);
-
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-
-
-/* REAL BRAND LOGO */
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-
-    color: white;
-    font-weight: 800;
-}
-
-.logo-mark {
-    width: 45px;
-    height: 45px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border-radius: 13px;
-
-    color: #00ff9d;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(0,255,157,0.16),
-            rgba(0,255,157,0.03)
-        );
-
-    border: 1px solid rgba(0,255,157,0.35);
-
-    box-shadow:
-        0 0 25px rgba(0,255,157,0.08);
-
-    font-size: 20px;
-}
-
-.logo-name {
-    display: flex;
-    flex-direction: column;
-    line-height: 1;
-}
-
-.logo-name strong {
-    font-size: 21px;
-    letter-spacing: 2px;
-}
-
-.logo-name strong span {
-    color: #00ff9d;
-}
-
-.logo-name small {
-    margin-top: 5px;
-    color: #7e8995;
-    font-size: 8px;
-    letter-spacing: 2.8px;
-    font-weight: 600;
-}
-
-
-nav ul {
-    display: flex;
-    gap: 30px;
-    list-style: none;
-}
-
-nav ul a {
-    color: white;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-nav ul a:hover {
-    color: #00ff9d;
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
+    margin: 0;
     min-height: 100vh;
 
     display: flex;
     align-items: center;
-
-    padding: 120px 7% 80px;
-
-    position: relative;
+    justify-content: center;
 
     background:
-        linear-gradient(
-            90deg,
-            rgba(5,7,10,0.96),
-            rgba(5,7,10,0.68),
-            rgba(5,7,10,0.28)
-        ),
-        url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2200&q=90");
+        linear-gradient(rgba(0,0,0,.88), rgba(15,0,0,.95)),
+        url("https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=1800&q=80");
 
     background-size: cover;
     background-position: center;
+
+    font-family: "Courier New", monospace;
+    color: #ddd;
 }
 
+.panel {
+    width: 92%;
+    max-width: 780px;
 
-.hero-content {
-    max-width: 720px;
-    animation: fadeUp 1s ease;
-}
+    padding: 32px;
 
+    background: rgba(5,5,5,.96);
 
-.badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-
-    padding: 8px 15px;
-
-    border: 1px solid rgba(0,255,157,0.4);
-    border-radius: 30px;
-
-    color: #00ff9d;
-    font-size: 13px;
-
-    margin-bottom: 20px;
-
-    background: rgba(0,255,157,0.05);
-}
-
-
-.hero h1 {
-    font-size: clamp(45px, 7vw, 85px);
-    line-height: 1;
-    margin-bottom: 25px;
-}
-
-.hero h1 span {
-    color: #00ff9d;
-}
-
-
-.hero p {
-    color: #b9c0c8;
-    font-size: 18px;
-    line-height: 1.7;
-
-    max-width: 630px;
-
-    margin-bottom: 35px;
-}
-
-
-/* =========================
-   BUTTONS
-========================= */
-
-.buttons {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-
-.btn {
-    padding: 15px 25px;
-
-    border-radius: 8px;
-
-    font-weight: 700;
-
-    transition: 0.3s;
-
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-}
-
-
-.primary {
-    background: #00ff9d;
-    color: #00150c;
-}
-
-
-.primary:hover {
-    transform: translateY(-4px);
-
-    box-shadow:
-        0 10px 35px rgba(0,255,157,0.3);
-}
-
-
-.secondary {
-    border: 1px solid rgba(255,255,255,0.2);
-    color: white;
-}
-
-
-.secondary:hover {
-    background: white;
-    color: black;
-}
-
-
-/* =========================
-   SERVICES
-========================= */
-
-.services {
-    padding: 100px 7%;
-    background: #080b10;
-}
-
-
-.section-title {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-
-.section-title h2 {
-    font-size: 42px;
-    margin-bottom: 15px;
-}
-
-
-.section-title p {
-    color: #89919c;
-}
-
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-
-.card {
-    min-height: 280px;
-
-    padding: 35px;
-
-    border-radius: 18px;
-
-    background: rgba(255,255,255,0.035);
-
-    border: 1px solid rgba(255,255,255,0.08);
-
-    transition: 0.4s;
-
-    position: relative;
-
-    overflow: hidden;
-}
-
-
-.card::before {
-    content: "";
-
-    position: absolute;
-
-    width: 150px;
-    height: 150px;
-
-    background: #00ff9d;
-
-    filter: blur(100px);
-
-    opacity: 0;
-
-    transition: 0.4s;
-}
-
-
-.card:hover::before {
-    opacity: 0.15;
-}
-
-
-.card:hover {
-    transform: translateY(-10px);
-
-    border-color:
-        rgba(0,255,157,0.4);
-}
-
-
-.icon {
-    width: 60px;
-    height: 60px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    border: 1px solid #651414;
     border-radius: 15px;
 
-    background: rgba(0,255,157,0.1);
-
-    color: #00ff9d;
-
-    font-size: 25px;
-
-    margin-bottom: 25px;
+    box-shadow: 0 0 60px rgba(255,0,0,.18);
 }
 
-
-.card h3 {
-    margin-bottom: 15px;
-    font-size: 21px;
-}
-
-
-.card p {
-    color: #89919c;
-    line-height: 1.7;
-}
-
-
-/* =========================
-   SHOWCASE
-========================= */
-
-.showcase {
-    padding: 100px 7%;
-}
-
-
-.showcase-grid {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 30px;
-}
-
-
-.image-box {
-    height: 450px;
-
-    border-radius: 20px;
-
-    overflow: hidden;
-
-    position: relative;
-
-    background-size: cover;
-    background-position: center;
-
-    transition: 0.5s;
-}
-
-
-.image-box:hover {
-    transform: scale(1.02);
-}
-
-
-/* CAMERA */
-
-.camera {
-    background-image:
-        linear-gradient(
-            transparent,
-            rgba(0,0,0,0.85)
-        ),
-        url("https://static.wixstatic.com/media/420f35_950145932a5d4c21967c29a53a5763aa~mv2.png/v1/fill/w_1000,h_667,al_c,q_90,usm_0.66_1.00_0.01/420f35_950145932a5d4c21967c29a53a5763aa~mv2.png");
-}
-
-
-/* HARDWARE */
-
-.hardware {
-    background-image:
-        linear-gradient(
-            transparent,
-            rgba(0,0,0,0.85)
-        ),
-        url("https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=1400&q=85");
-}
-
-
-/* WINDOWS */
-
-.windows {
-    background-image:
-        linear-gradient(
-            transparent,
-            rgba(0,0,0,0.85)
-        ),
-        url("https://web.sas.upenn.edu/jasonrw/files/2017/04/windows-10-install.png");
-}
-
-
-/* PHOTO EDITING */
-
-.photo-editing {
-    background-image:
-        linear-gradient(
-            transparent,
-            rgba(0,0,0,0.85)
-        ),
-        url("https://martinkleinheinz.de/_next/image/?q=75&url=%2Fpc+fuer+fotografen.webp&w=3840");
-}
-
-
-/* INVERTER */
-
-.inverter {
-    background-image:
-        linear-gradient(
-            transparent,
-            rgba(0,0,0,0.85)
-        ),
-        url("https://localbunch.com.au/wp-content/uploads/2023/10/Inverter-App-on-Smartphone-2048x1366.jpg");
-}
-
-
-.image-text {
-    position: absolute;
-
-    bottom: 30px;
-    left: 30px;
-
-    right: 30px;
-}
-
-
-.image-text h3 {
-    font-size: 28px;
-    margin-bottom: 8px;
-}
-
-
-.image-text p {
-    color: #ccc;
-    line-height: 1.5;
-}
-
-
-/* =========================
-   TECH SERVICES
-========================= */
-
-.tech-services {
-    padding: 100px 7%;
-
-    background: #05070a;
-}
-
-
-.service-list {
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
-    gap: 20px;
-
-    max-width: 1100px;
-
-    margin: auto;
-}
-
-
-.service-item {
+.header {
     display: flex;
-
-    align-items: flex-start;
-
-    gap: 20px;
-
-    padding: 28px;
-
-    border-radius: 16px;
-
-    background:
-        rgba(255,255,255,0.025);
-
-    border:
-        1px solid rgba(255,255,255,0.07);
-
-    transition: 0.35s;
-}
-
-
-.service-item:hover {
-    transform: translateY(-5px);
-
-    border-color:
-        rgba(0,255,157,0.35);
-}
-
-
-.service-item-icon {
-    min-width: 52px;
-    height: 52px;
-
-    display: flex;
-
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
 
-    border-radius: 13px;
+    padding-bottom: 17px;
 
-    color: #00ff9d;
-
-    background:
-        rgba(0,255,157,0.08);
-
-    font-size: 21px;
+    border-bottom: 1px solid #261010;
 }
 
-
-.service-item h3 {
-    margin-bottom: 8px;
+.logo {
+    color: #ff2929;
+    font-size: 12px;
+    letter-spacing: 3px;
 }
 
-
-.service-item p {
-    color: #89919c;
-
-    line-height: 1.6;
-
-    font-size: 14px;
+.active {
+    color: #ff2929;
+    font-size: 11px;
 }
 
+.active::before {
+    content: "";
+    display: inline-block;
 
-/* =========================
-   CTA
-========================= */
+    width: 6px;
+    height: 6px;
 
-.cta {
-    margin: 40px 7% 100px;
+    margin-right: 7px;
 
-    padding: 80px 30px;
+    background: #f22;
+    border-radius: 50%;
 
-    text-align: center;
-
-    border-radius: 25px;
-
-    background:
-        linear-gradient(
-            rgba(0,255,157,0.08),
-            rgba(0,255,157,0.02)
-        );
-
-    border:
-        1px solid rgba(0,255,157,0.15);
+    box-shadow: 0 0 10px red;
 }
 
+h1 {
+    margin: 30px 0 7px;
 
-.cta h2 {
-    font-size: 45px;
-    margin-bottom: 15px;
+    color: #fff;
+
+    font-size: 31px;
+    font-weight: 400;
 }
 
-
-.cta p {
-    color: #89919c;
-
-    margin-bottom: 30px;
+.sub {
+    color: #666;
+    font-size: 13px;
 }
 
+.target {
+    margin-top: 27px;
 
-/* =========================
-   CONTACT
-========================= */
+    padding: 20px;
 
-.contact {
-    padding: 90px 7%;
+    background: #090909;
 
-    background: #080b10;
+    border: 1px solid #241414;
+    border-radius: 10px;
 }
 
+.label {
+    color: #555;
 
-.contact-box {
-    max-width: 900px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
-    gap: 20px;
-}
-
-
-.contact-card {
-    padding: 30px;
-
-    border-radius: 18px;
-
-    background:
-        rgba(255,255,255,0.035);
-
-    border:
-        1px solid rgba(255,255,255,0.08);
-
-    transition: 0.3s;
-}
-
-
-.contact-card:hover {
-    border-color:
-        rgba(0,255,157,0.35);
-
-    transform: translateY(-5px);
-}
-
-
-.contact-card i {
-    font-size: 25px;
-
-    color: #00ff9d;
-
-    margin-bottom: 18px;
-}
-
-
-.contact-card h3 {
-    margin-bottom: 8px;
-}
-
-
-.contact-card p {
-    color: #89919c;
-
-    margin-bottom: 6px;
-}
-
-
-.contact-card a {
-    color: white;
-
-    font-weight: 600;
-
-    transition: 0.3s;
-}
-
-
-.contact-card a:hover {
-    color: #00ff9d;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    padding: 35px 7%;
-
-    text-align: center;
-
-    border-top:
-        1px solid rgba(255,255,255,0.08);
-
-    color: #6f7781;
-}
-
-
-.footer-logo {
-    color: white;
-
-    font-size: 20px;
-
-    font-weight: 800;
+    font-size: 10px;
 
     letter-spacing: 2px;
 
     margin-bottom: 10px;
 }
 
+.email {
+    color: white;
 
-.footer-logo span {
-    color: #00ff9d;
+    font-size: 19px;
+
+    word-break: break-all;
 }
 
+.email span {
+    color: #ff2929;
+}
 
-/* =========================
-   WHATSAPP
-========================= */
-
-.whatsapp {
-    position: fixed;
-
-    right: 25px;
-    bottom: 25px;
-
-    width: 60px;
-    height: 60px;
-
+.info {
     display: flex;
+    justify-content: space-between;
 
-    justify-content: center;
-    align-items: center;
+    margin-top: 27px;
 
-    background: #25D366;
+    font-size: 12px;
+}
 
-    color: white;
+#status {
+    color: #ff3535;
+}
+
+#percent {
+    color: #aaa;
+}
+
+.bar {
+    height: 6px;
+
+    margin-top: 10px;
+
+    background: #180707;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.fill {
+    width: 0%;
+
+    height: 100%;
+
+    background: #ed1717;
+
+    box-shadow: 0 0 15px red;
+
+    transition: width .08s linear;
+}
+
+.terminal {
+    margin-top: 25px;
+
+    min-height: 155px;
+
+    padding: 17px;
+
+    background: #030303;
+
+    border: 1px solid #1d1010;
+
+    border-radius: 9px;
+
+    color: #666;
+
+    font-size: 12px;
+
+    line-height: 1.85;
+
+    overflow: hidden;
+}
+
+.red {
+    color: #e83232;
+}
+
+.complete {
+    display: none;
+
+    margin-top: 28px;
+
+    padding-top: 28px;
+
+    text-align: center;
+
+    border-top: 1px solid #211010;
+}
+
+.check {
+    width: 68px;
+    height: 68px;
+
+    margin: auto;
+
+    border: 2px solid #ef2222;
 
     border-radius: 50%;
 
-    font-size: 30px;
+    position: relative;
 
-    text-decoration: none;
+    animation: pop .45s ease-out;
 
-    z-index: 999;
-
-    box-shadow:
-        0 8px 30px rgba(37,211,102,0.35);
-
-    animation: pulse 2s infinite;
-
-    transition: 0.3s;
+    box-shadow: 0 0 25px rgba(255,0,0,.2);
 }
 
+.check::after {
+    content: "";
 
-.whatsapp:hover {
-    transform: scale(1.1);
+    position: absolute;
+
+    width: 18px;
+    height: 33px;
+
+    left: 21px;
+    top: 9px;
+
+    border-right: 3px solid #ef2222;
+    border-bottom: 3px solid #ef2222;
+
+    transform: rotate(45deg);
 }
 
+.complete-title {
+    margin-top: 18px;
 
-/* =========================
-   ANIMATIONS
-========================= */
+    color: #ff3030;
 
-@keyframes fadeUp {
+    font-size: 16px;
 
+    letter-spacing: 1px;
+}
+
+.transfer {
+    margin-top: 15px;
+
+    color: #ff4545;
+
+    font-size: 13px;
+}
+
+.destination {
+    margin-top: 9px;
+
+    color: #777;
+
+    font-size: 12px;
+}
+
+.destination strong {
+    color: #bbb;
+}
+
+.simulation {
+    margin-top: 14px;
+
+    color: #444;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+}
+
+@keyframes pop {
     from {
+        transform: scale(.3);
         opacity: 0;
-        transform: translateY(30px);
     }
 
     to {
+        transform: scale(1);
         opacity: 1;
-        transform: translateY(0);
     }
-
 }
 
+@media (max-width: 600px) {
 
-@keyframes pulse {
-
-    0% {
-        box-shadow:
-            0 0 0 0
-            rgba(37,211,102,0.5);
+    .panel {
+        padding: 23px;
     }
 
-    70% {
-        box-shadow:
-            0 0 0 15px
-            rgba(37,211,102,0);
+    h1 {
+        font-size: 25px;
     }
 
-    100% {
-        box-shadow:
-            0 0 0 0
-            rgba(37,211,102,0);
-    }
-
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 800px) {
-
-    nav {
-        padding: 15px 5%;
-    }
-
-    nav ul {
-        display: none;
-    }
-
-    .logo-mark {
-        width: 41px;
-        height: 41px;
-    }
-
-    .logo-name strong {
-        font-size: 18px;
-    }
-
-    .logo-name small {
-        font-size: 7px;
-    }
-
-    .hero {
-        padding:
-            120px 5% 70px;
-
-        background-position:
-            65% center;
-    }
-
-    .hero h1 {
-        font-size: 48px;
-    }
-
-    .hero p {
+    .email {
         font-size: 16px;
     }
-
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-    .showcase-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .service-list {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-box {
-        grid-template-columns: 1fr;
-    }
-
-    .image-box {
-        height: 320px;
-    }
-
-    .services,
-    .showcase,
-    .tech-services,
-    .contact {
-        padding: 70px 5%;
-    }
-
-    .cta {
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-
-    .cta h2 {
-        font-size: 32px;
-    }
-
 }
-
-
-/* EXTRA SMALL PHONES */
-
-@media (max-width: 450px) {
-
-    .logo-name small {
-        display: none;
-    }
-
-    .hero h1 {
-        font-size: 43px;
-    }
-
-    .buttons {
-        flex-direction: column;
-    }
-
-    .btn {
-        justify-content: center;
-    }
-
-    .whatsapp {
-        right: 18px;
-        bottom: 18px;
-
-        width: 55px;
-        height: 55px;
-    }
-
-}
-
 </style>
 </head>
 
-
 <body>
 
+<div class="panel">
 
-<!-- =========================
-     NAVIGATION
-========================= -->
+    <div class="header">
 
-<nav>
-
-    <a href="#home" class="logo">
-
-        <div class="logo-mark">
-            <i class="fa-solid fa-microchip"></i>
+        <div class="logo">
+            HACK // SIMULATION
         </div>
 
-        <div class="logo-name">
-
-            <strong>
-                TECH<span>VISION</span>
-            </strong>
-
-            <small>
-                TECHNOLOGY & SECURITY
-            </small>
-
-        </div>
-
-    </a>
-
-
-    <ul>
-
-        <li>
-            <a href="#home">Home</a>
-        </li>
-
-        <li>
-            <a href="#services">Services</a>
-        </li>
-
-        <li>
-            <a href="#technology">Technology</a>
-        </li>
-
-        <li>
-            <a href="#contact">Contact</a>
-        </li>
-
-    </ul>
-
-</nav>
-
-
-
-<!-- =========================
-     HERO
-========================= -->
-
-<section class="hero" id="home">
-
-    <div class="hero-content">
-
-        <div class="badge">
-
-            <i class="fa-solid fa-circle-check"></i>
-
-            Professional Technology Solutions
-
-        </div>
-
-
-        <h1>
-
-            Smart Tech.
-            <br>
-
-            <span>Reliable Solutions.</span>
-
-        </h1>
-
-
-        <p>
-
-            Professional CCTV installation, computer services,
-            Windows installation, hardware & software troubleshooting,
-            photo editing and smart inverter app configuration.
-
-        </p>
-
-
-        <div class="buttons">
-
-            <a
-                href="#services"
-                class="btn primary">
-
-                Explore Services
-
-                <i class="fa-solid fa-arrow-right"></i>
-
-            </a>
-
-
-            <a
-                href="https://wa.me/923457971107"
-                class="btn secondary"
-                target="_blank">
-
-                <i class="fa-brands fa-whatsapp"></i>
-
-                WhatsApp Us
-
-            </a>
-
+        <div class="active">
+            HACKING ACTIVE
         </div>
 
     </div>
 
-</section>
+    <h1>Hacking This Email</h1>
 
+    <div class="sub">
+        Remote access sequence initialized
+    </div>
 
+    <div class="target">
 
-<!-- =========================
-     MAIN SERVICES
-========================= -->
+        <div class="label">
+            TARGET EMAIL
+        </div>
 
-<section class="services" id="services">
-
-
-    <div class="section-title">
-
-        <h2>
-            What We Do
-        </h2>
-
-        <p>
-            Technology services for your home, office and everyday needs.
-        </p>
+        <div class="email">
+            <span>●</span>
+            bs825959@gmail.com
+        </div>
 
     </div>
 
+    <div class="info">
 
-    <div class="cards">
+        <span id="status">
+            Initializing hack...
+        </span>
 
-
-        <!-- CCTV -->
-
-        <div class="card">
-
-            <div class="icon">
-
-                <i class="fa-solid fa-video"></i>
-
-            </div>
-
-            <h3>
-                CCTV Installation
-            </h3>
-
-            <p>
-
-                Professional security camera installation,
-                positioning and basic system configuration
-                for homes, shops and offices.
-
-            </p>
-
-        </div>
-
-
-
-        <!-- COMPUTER -->
-
-        <div class="card">
-
-            <div class="icon">
-
-                <i class="fa-solid fa-computer"></i>
-
-            </div>
-
-            <h3>
-                Computer Services
-            </h3>
-
-            <p>
-
-                Hardware and software troubleshooting,
-                computer setup, upgrades, optimization
-                and general technical assistance.
-
-            </p>
-
-        </div>
-
-
-
-        <!-- WINDOWS -->
-
-        <div class="card">
-
-            <div class="icon">
-
-                <i class="fa-brands fa-windows"></i>
-
-            </div>
-
-            <h3>
-                Windows Installation
-            </h3>
-
-            <p>
-
-                Clean Windows installation and setup,
-                driver installation, basic configuration
-                and system preparation.
-
-            </p>
-
-        </div>
-
+        <span id="percent">
+            0%
+        </span>
 
     </div>
 
-</section>
+    <div class="bar">
 
-
-
-<!-- =========================
-     VISUAL SHOWCASE
-========================= -->
-
-<section class="showcase" id="technology">
-
-
-    <div class="section-title">
-
-        <h2>
-            Technology In Action
-        </h2>
-
-        <p>
-            Practical technology services with a modern approach.
-        </p>
+        <div class="fill" id="fill"></div>
 
     </div>
 
+    <div class="terminal" id="terminal">
 
-    <div class="showcase-grid">
+        <div>> Initializing hacking sequence...</div>
 
+        <div>> Connecting to target...</div>
 
-        <!-- CCTV -->
-
-        <div class="image-box camera">
-
-            <div class="image-text">
-
-                <h3>
-                    CCTV Installation
-                </h3>
-
-                <p>
-                    Security cameras installed and configured
-                    for reliable monitoring.
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- HARDWARE -->
-
-        <div class="image-box hardware">
-
-            <div class="image-text">
-
-                <h3>
-                    Hardware & PC Services
-                </h3>
-
-                <p>
-                    Computer hardware troubleshooting,
-                    upgrades and technical support.
-                </p>
-
-            </div>
-
-        </div>
-
+        <div>> Target identified...</div>
 
     </div>
 
-</section>
+    <div class="complete" id="complete">
 
+        <div class="check"></div>
 
+        <div class="complete-title">
+            HACK COMPLETE
+        </div>
 
-<!-- =========================
-     MORE SERVICES
-========================= -->
+        <div class="transfer">
+            DATA TRANSFER SIMULATION COMPLETE
+        </div>
 
-<section class="tech-services">
+        <div class="destination">
+            Destination:
+            <strong>ahmadbilal477@gmail.com</strong>
+        </div>
 
-
-    <div class="section-title">
-
-        <h2>
-            More Technical Services
-        </h2>
-
-        <p>
-            From computer setup to digital and smart-energy solutions.
-        </p>
+        <div class="simulation">
+            SIMULATION — NO DATA WAS TRANSMITTED
+        </div>
 
     </div>
 
+</div>
 
-    <div class="service-list">
+<script>
 
+let progress = 0;
 
-        <!-- WINDOWS -->
+const fill = document.getElementById("fill");
+const percent = document.getElementById("percent");
+const status = document.getElementById("status");
+const terminal = document.getElementById("terminal");
+const complete = document.getElementById("complete");
 
-        <div class="service-item">
+const steps = [
 
-            <div class="service-item-icon">
+    "Initializing hack...",
 
-                <i class="fa-brands fa-windows"></i>
+    "Connecting to target...",
 
-            </div>
+    "Scanning authentication layer...",
 
-            <div>
+    "Decrypting simulated account data...",
 
-                <h3>
-                    Windows Installation
-                </h3>
+    "Establishing simulated transfer channel...",
 
-                <p>
+    "Executing simulated payload...",
 
-                    Windows installation, drivers,
-                    essential setup and basic system configuration.
+    "Finalizing hack..."
 
-                </p>
+];
 
-            </div>
+let step = 0;
 
-        </div>
+const timer = setInterval(() => {
 
+    progress++;
 
+    fill.style.width = progress + "%";
 
-        <!-- SOFTWARE -->
+    percent.textContent = progress + "%";
 
-        <div class="service-item">
+    if (progress % 14 === 0 && step < steps.length) {
 
-            <div class="service-item-icon">
+        status.textContent = steps[step];
 
-                <i class="fa-solid fa-code"></i>
+        const line = document.createElement("div");
 
-            </div>
+        line.className = "red";
 
-            <div>
+        line.textContent = "> " + steps[step];
 
-                <h3>
-                    Software Troubleshooting
-                </h3>
+        terminal.appendChild(line);
 
-                <p>
+        step++;
+    }
 
-                    Fixing common software problems,
-                    installation issues, errors and configuration problems.
+    if (progress >= 100) {
 
-                </p>
+        clearInterval(timer);
 
-            </div>
+        status.textContent = "HACK COMPLETE";
 
-        </div>
+        setTimeout(() => {
 
+            complete.style.display = "block";
 
+        }, 600);
 
-        <!-- HARDWARE -->
+    }
 
-        <div class="service-item">
+}, 75);
 
-            <div class="service-item-icon">
-
-                <i class="fa-solid fa-screwdriver-wrench"></i>
-
-            </div>
-
-            <div>
-
-                <h3>
-                    Hardware Repair
-                </h3>
-
-                <p>
-
-                    Basic computer hardware diagnosis,
-                    component troubleshooting and PC maintenance.
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- PHOTO EDITING -->
-
-        <div class="service-item">
-
-            <div class="service-item-icon">
-
-                <i class="fa-solid fa-image"></i>
-
-            </div>
-
-            <div>
-
-                <h3>
-                    Photo Editing
-                </h3>
-
-                <p>
-
-                    Photo enhancement, editing,
-                    retouching and digital image work.
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- SOLIS -->
-
-        <div class="service-item">
-
-            <div class="service-item-icon">
-
-                <i class="fa-solid fa-solar-panel"></i>
-
-            </div>
-
-            <div>
-
-                <h3>
-                    Solis Inverter App Configuration
-                </h3>
-
-                <p>
-
-                    Help with connecting and configuring
-                    compatible Solis inverter monitoring applications.
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- NITROX -->
-
-        <div class="service-item">
-
-            <div class="service-item-icon">
-
-                <i class="fa-solid fa-bolt"></i>
-
-            </div>
-
-            <div>
-
-                <h3>
-                    Nitrox Inverter App Configuration
-                </h3>
-
-                <p>
-
-                    Assistance with compatible Nitrox inverter
-                    monitoring app setup and configuration.
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     SERVICE IMAGES
-========================= -->
-
-<section class="showcase">
-
-
-    <div class="section-title">
-
-        <h2>
-            Digital & Smart Solutions
-        </h2>
-
-        <p>
-            Services that combine computers, creativity and modern technology.
-        </p>
-
-    </div>
-
-
-    <div class="showcase-grid">
-
-
-        <!-- WINDOWS -->
-
-        <div class="image-box windows">
-
-            <div class="image-text">
-
-                <h3>
-                    Windows Setup
-                </h3>
-
-                <p>
-                    Fresh installation and computer preparation.
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- PHOTO EDITING -->
-
-        <div class="image-box photo-editing">
-
-            <div class="image-text">
-
-                <h3>
-                    Photo Editing
-                </h3>
-
-                <p>
-                    Creative editing and digital image enhancement.
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- INVERTER -->
-
-        <div class="image-box inverter">
-
-            <div class="image-text">
-
-                <h3>
-                    Smart Inverter Monitoring
-                </h3>
-
-                <p>
-                    Solis & Nitrox app configuration and monitoring assistance.
-                </p>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     CTA
-========================= -->
-
-<section class="cta">
-
-
-    <h2>
-        Need Technical Help?
-    </h2>
-
-
-    <p>
-
-        Get in touch today for computer,
-        security and technology services.
-
-    </p>
-
-
-    <a
-        href="https://wa.me/923457971107"
-        target="_blank"
-        class="btn primary">
-
-        <i class="fa-brands fa-whatsapp"></i>
-
-        Chat on WhatsApp
-
-    </a>
-
-
-</section>
-
-
-
-<!-- =========================
-     CONTACT
-========================= -->
-
-<section class="contact" id="contact">
-
-
-    <div class="section-title">
-
-        <h2>
-            Contact TechVision
-        </h2>
-
-        <p>
-            Have a project or need technical assistance?
-            Let's talk.
-        </p>
-
-    </div>
-
-
-    <div class="contact-box">
-
-
-        <!-- PHONE -->
-
-        <div class="contact-card">
-
-            <i class="fa-solid fa-phone"></i>
-
-            <h3>
-                Phone
-            </h3>
-
-            <p>
-                Call us directly:
-            </p>
-
-            <a href="tel:+923457971107">
-
-                +92 345 7971107
-
-            </a>
-
-        </div>
-
-
-
-        <!-- WHATSAPP -->
-
-        <div class="contact-card">
-
-            <i class="fa-brands fa-whatsapp"></i>
-
-            <h3>
-                WhatsApp
-            </h3>
-
-            <p>
-                Message us on WhatsApp:
-            </p>
-
-            <a
-                href="https://wa.me/923457971107"
-                target="_blank">
-
-                +92 345 7971107
-
-            </a>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer>
-
-
-    <div class="footer-logo">
-
-        TECH<span>VISION</span>
-
-    </div>
-
-
-    <p>
-
-        Technology • Security • Computer Services
-
-    </p>
-
-
-    <br>
-
-
-    © 2026 TechVision. All rights reserved.
-
-
-</footer>
-
-
-
-<!-- =========================
-     FLOATING WHATSAPP
-========================= -->
-
-<a
-    href="https://wa.me/923457971107"
-    target="_blank"
-    class="whatsapp"
-    aria-label="Contact TechVision on WhatsApp">
-
-    <i class="fa-brands fa-whatsapp"></i>
-
-</a>
-
+</script>
 
 </body>
 </html>
